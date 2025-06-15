@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class BlogPost extends Model
 {
     use SoftDeletes;
+    use HasFactory;
     protected $fillable
         = [
             'title',
@@ -42,6 +43,5 @@ class BlogPost extends Model
         //стаття належить користувачу
         return $this->belongsTo(User::class);
     }
-    use HasFactory;
     //
 }
